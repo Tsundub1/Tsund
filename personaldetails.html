@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bursary Management System</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="css/fontastic.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- DataTables CSS-->
+    <link rel="stylesheet" href="vendor/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="vendor/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.premium.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+		<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/.css">
+  </head>
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header d-flex align-items-center justify-content-center"style="margin-left: 50px;">
+          <!-- User Info-->
+		   <div class="navbar-holder d-flex align-items-center justify-content-between">
+		   <h3 style="color:#172B4D;">Bursary <br ><span style="color:#7764E4; font-size: 1.2rem;"> Management </span> </h3>
+              <div class="navbar-header " style="margin-left: 20px;"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="Adminhome.html" class="navbar-brand">
+                 </div> 
+				 
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Notifications dropdown-->
+               
+                <!-- Log out-->
+              </ul>
+            </div>
+         
+          <!-- Small Brand information, appears on minimized sidebar-->
+          <div class="sidenav-header-logo"><a href="Dashboard.html" class="brand-small text-center"> <strong>B</strong></a></div>
+        </div>
+        <!-- Sidebar Navigation Menus-->
+           <div class="main-menu">
+          
+          <ul id="side-main-menu" class="side-menu list-unstyled">                  
+            <li><a href="dashboard.html"> <span style="background-image: url(images/icons/home.svg)" class="avatar avatar-x2 mr-3"></span>Home                             </a></li>
+            <li><a href="personaldetails.html" > <span style="background-image: url(images/icons/personal.svg)" class="avatar avatar-x2 mr-3"></span>Personal Details</a>
+              
+            </li>
+			<li><a href="application.html" > <span style="background-image: url(images/icons/Applications.svg)" class="avatar avatar-x2 mr-3"></span>Application Process</a>
+			<li><a href="fundswallet.html" > <span style="background-image: url(images/icons/wallet.svg)" class="avatar avatar-x2 mr-3"></span>Funds Wallet</a>
+			<li><a href="academicLog.html" > <span style="background-image: url(images/icons/Academiclog.svg)" class="avatar avatar-x2 mr-3"></span>Academic Log</a>
+			<li><a href="login.html" class="nav-link logout"><span style="background-image: url(images/icons/logout.svg)" class="avatar avatar-x2 mr-3"></span>Logout</a>
+              
+            </li>
+            
+        
+      </div>
+    </nav>
+    <div class="page" ng-app="myApp" ng-controller="personController">
+      <!-- navbar-->
+      	 
+      <header class="header" >
+	   <div class="topnav" id="myTopnav">
+	   <a style ="background-color: white;"> <h3 style="color:#172B4D; padding-bottom: 3px;text-align: initial;">Bursary <br ><span style="color:#7764E4; font-size: 1.1rem;"> Management </span> </h3></a>
+		<a href="dashboard.html"> <span style="background-image: url(images/icons/home.svg)" class="avatar avatar-x2 mr-3"></span>Home                             </a>
+           <a href="personaldetails.html" > <span style="background-image: url(images/icons/personal.svg)" class="avatar avatar-x2 mr-3"></span>Personal Details</a>
+           
+			<a href="application.html" > <span style="background-image: url(images/icons/Applications.svg)" class="avatar avatar-x2 mr-3"></span>Application Process</a>
+			<a href="fundswallet.html" > <span style="background-image: url(images/icons/wallet.svg)" class="avatar avatar-x2 mr-3"></span>Funds Wallet</a>
+			<a href="academicLog.html" > <span style="background-image: url(images/icons/Academiclog.svg)" class="avatar avatar-x2 mr-3"></span>Academic Log</a>
+			<a href="login.html" class="nav-link logout"><span style="background-image: url(images/icons/logout.svg)" class="avatar avatar-x2 mr-3"></span>Logout</a>
+              
+           
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i style="color:blue" class="fa fa-bars"></i>
+		</a>
+		</div>
+
+	  
+        <nav class="navbar" style="background-image: url(images/den.jpg);">
+		<div class="row" style="flex-wrap: nowrap; display:flex;">
+		<div class="profile-picture big-profile-picture clear "style="    width: 100px; float:right; margin-left: 8%;">
+                  <img src="img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle mCS_img_loaded" style="max-width:125%;margin-top: -2px;margin-left: -5px;">       
+		               
+		</div>			
+          <div class="container-fluid">
+            <div class="sidenav-header-inner text-center">
+			
+            <h6 class="h6" style="text-align: justify;"> Hi user Name,</h6>
+			<a style="color:white; text-align: initial; "> Welcome to te Bursary Management System.</a>
+         
+          </div>
+		   </div> </div>
+        </nav>
+      </header>
+      <!-- Breadcrumb-->
+      <div class="breadcrumb-holder" style= "background-image: url(images/den.jpg);"> 
+	  <div  style=" float:right; color:white;padding-right: 20px;padding-top: 15px;"><a href="dashboard.html" style=" color:white;"> <span style="background-image: url(images/icons/back.png)" class="avatar avatar-x2 mr-3"></span>Back  </a> </div>
+      
+        <div class="container-fluid" style="background-image: url(images/den.jpg);">
+		
+          <ul class="breadcrumb" style="background-image: url(images/den.jpg);">
+            <li><h1 style="padding-right:20px; color:white;">Personal Details</h1></li>
+			<li class="breadcrumb-item"><a style=" color:white;" href="Dashboard.html">Home</a></li>
+            <li class="breadcrumb-item active" style=" color:white;">  Personal Details    </li>
+          </ul>
+        </div>
+      </div>
+      <section>
+        
+            
+				<div class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+					
+					<div class="container" style=" margin-top: -120px;">
+              <div class="row">
+                <div class="col-xs-12 ">
+                  <nav>
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist" style="margin-bottom: 15px">
+                      <a class="nav-item nav-link active" id="nav-personal-tab" data-toggle="tab" href="#nav-personal" role="tab" aria-controls="nav-personal" aria-selected="true">Personal</a>
+                     <!-- <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact role="tab" aria-controls="nav-contact" aria-selected="false">Contact Details</a>-->
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact </a>
+                     
+					  <a class="nav-item nav-link" id="nav-academic-tab" data-toggle="tab" href="#nav-academic" role="tab" aria-controls="nav-academic" aria-selected="false">Academic </a>
+					  
+					  <a class="nav-item nav-link" id="nav-bank-tab" data-toggle="tab" href="#nav-bank" role="tab" aria-controls="nav-bank" aria-selected="false">Bank</a>
+                    </div>
+                  </nav>
+                  <div class="tab-content py-3px-3 px-sm-0" id="nav-tabContent" style="margin-left: -15px; margin-right: -15px; margin-top: -17px;">
+                    <div class="tab-pane fade show active" id="nav-personal" role="tabpanel" aria-labelledby="nav-personal-tab">
+                        <div class="col-lg-12">
+              <div class="card">
+               
+				
+                <div class="card-body">
+                  <form class="form-horizontal" name= "personal" novalidate>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Name:</label>
+                      <div class="col-sm-10">
+                        <input type="text" placeholder="Name" class="form-control" ng-model="newpersonname" name="newpersonname" required>
+						<span style="color:red" ng-show="personal.newpersonname.$dirty && personal.newpersonname.$invalid || savesubmitted">
+						<span ng-show="personal.newpersonname.$error.required">Name is required.</span>
+						</span>
+                      </div>
+                    </div>
+					
+					 <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Surname:</label>
+                      <div class="col-sm-10">
+                        <input type="text" placeholder="Surname" class="form-control" name="newpersonsurname" required ng-model="newpersonsurname">
+						<span style="color:red" ng-show="personal.newpersonsurname.$dirty && personal.newpersonsurname.$invalid || savesubmitted">
+						<span ng-show="personal.newpersonsurname.$error.required">Surname is required.</span>
+						</span>
+                      </div>
+                    </div>
+					 <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">ID Number:</label>
+                      <div class="col-sm-10">
+                        <input type="number" placeholder="ID number" class="form-control" ng-model="newpersonID"name="newpersonID" required ng-minlength='13' ng-maxlength="13" required ng-pattern="/^(((\d{2}((0[13578]|1[02])(0[1-9]|[12]\d|3[01])|(0[13456789]|1[012])(0[1-9]|[12]\d|30)|02(0[1-9]|1\d|2[0-8])))|([02468][048]|[13579][26])0229))(( |-)(\d{4})( |-)(\d{3})|(\d{7}))/">
+						<span style="color:red" ng-show="personal.newpersonID.$dirty && personal.newpersonID.$invalid || savesubmitted">
+						<span class="help-inline" ng-show=" personal.newpersonID.$error.required || personal.newpersonID.$dirty && personal.newpersonID.$error.required">ID Number is required.</span>
+							<span class="help-inline" ng-show=" personal.newpersonID.$error.minlength || personal.newpersonID.$dirty && personal.newpersonID.$error.minlength">ID Number must be 13 characters long.</span>
+							<span class="help-inline" ng-show="personal.newpersonID.$error.maxlength || personal.newpersonID.$dirty && personal.newpersonID.$error.maxlength">ID Number must be 13 characters long.</span><br>
+							<span class="help-inline" ng-show=" personal.newpersonID.$error.pattern || personal.newpersonID.$dirty && personal.newpersonID.$error.pattern">Please fill in a valid ID number.</span>
+						
+						</span>
+                      </div>
+                    </div>
+				
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label" >Title:</label>
+                      <div class="col-sm-10 ">
+                        <select name="newpersontitle" required class="form-control" ng-model="newpersontitle" ng-init="newpersontitle='Mr'">
+                          <option>Mr</option>
+                          <option>Mrs</option>
+                          <option>Miss</option>
+                        </select>
+						<span style="color:red" ng-show="personal.newpersontitle.$dirty && personal.newpersontitle.$invalid || savesubmitted">
+						<span ng-show="personal.newpersontitle.$error.required">Title is required.</span>
+						</span>
+                      </div>
+                     
+                    </div>
+					<div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Gender:</label>
+                      <div class="col-sm-10 ">
+                        <select name="newpersongender" required class="form-control" ng-model="newpersongender"  ng-init="newpersongender='Male'">
+                          <option>Male</option>
+                          <option>Female</option>
+                        </select>
+						<span style="color:red" ng-show="personal.newpersongender.$dirty && personal.newpersongender.$invalid || savesubmitted">
+						<span ng-show="personal.newpersongender.$error.required">Gender is required.</span>
+						</span>
+                      </div>
+					  
+                     
+                    </div>
+					<div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Marital Status</label>
+                      <div class="col-sm-10 ">
+                        <select name="newpersonmarital" required class="form-control" ng-model="newpersonmarital" ng-init="newpersonmarital='Single'">
+                          <option>Single</option>
+                          <option>Married</option>
+                          <option>Divorced</option>
+                        </select>
+						<span style="color:red" ng-show="personal.newpersonmarital.$dirty && personal.newpersonmarital.$invalid || savesubmitted">
+						<span ng-show="personal.newpersonmarital.$error.required">Marital status is required.</span>
+						</span>
+                      </div>
+					  
+                     
+                    </div>
+					
+                   
+                   <div class="form-group row " style="visibility: hidden">
+                      <label class="col-sm-2 form-control-label">Column sizing</label>
+                      <div class="col-sm-10">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <input type="text" placeholder=".col-md-2" class="form-control">
+                          </div>
+                          <div class="col-md-10">
+                            <input type="text" placeholder=".col-md-3" class="form-control">
+                          </div>
+                          <div class="col-md-4">
+                            <input type="text" placeholder=".col-md-4" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="form-group row">
+                      <div class="col-sm-12">
+                        <button type="submit" class="btn btn-secondary"style="float: right">Cancel</button>
+                        <button type="submit" class="btn btn-primary"style="float: right" ng-click="savePerson(personal.$valid)">Save changes</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+				</div>
+                   
+					<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                       <div class="col-lg-12">
+              <div class="card">
+             
+                <div class="card-body">
+                  <form class="form-horizontal" name="contact" novalidate>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Email:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="newpersonemail" disabled>
+						
+                      </div>
+                    </div>
+					<div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Cell:</label>
+                      <div class="col-sm-10">
+                        <input type="number" class="form-control" ng-model="newpersoncell" name="cell" required>
+						<span style="color:red" ng-show="contact.cell.$dirty && contact.cell.$invalid || savesubmitted">
+						<span ng-show="contact.cell.$error.required">Contact is required.</span>
+						</span>
+                      </div>
+                    </div>
+					
+				
+                    <div class="line"></div>
+                    
+                    <div class="line"></div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Address</label>
+					  <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="newpersonaddress" name="address" required>
+						<span style="color:red" ng-show="contact.address.$dirty && contact.address.$invalid || savesubmitted">
+						<span ng-show="contact.address.$error.required">Address is required.</span>
+						</span>
+                      </div>
+					  <!--  fields are useless -->
+                      <div class="col-sm-10" style="visibility: hidden">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <input type="text" placeholder=".Street" class="form-control">
+                          </div>
+                          <div class="col-md-3">
+                            <input type="text" placeholder="sub" class="form-control">
+                          </div>
+                          <div class="col-md-2">
+                            <input type="text" placeholder="Post code" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line"> </div>
+                    
+                    
+                    <div class="form-group row">
+                      <div class="col-sm-12">
+                        <button type="submit" class="btn btn-secondary"style="float: right">Cancel</button>
+                        <button type="submit" class="btn btn-primary"style="float: right" ng-click="saveContact(contact.$valid)">Save changes</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div> </div>
+                    <div class="tab-pane fade" id="nav-academic" role="tabpanel" aria-labelledby="nav-academic-tab">
+                       <div class="col-lg-12">
+              <div class="card">
+               
+                <div class="card-body">
+                  <form class="form-horizontal" name="acadamic" novalidate>
+                    
+                   
+					<div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Highest Qualification:</label>
+                      <div class="col-sm-10 ">
+                        <select name="highestQual"  required class="form-control" ng-model="qualification" ng-init="qualification='Grade 10'">
+                          <option>Grade 10</option>
+                          <option>Grade 11</option>
+                          <option>Grade 12</option>
+                          <option>Diploma</option>
+						  <option>Certification</option>
+						  <option>Degree</option>
+                        </select>
+						<span style="color:red" ng-show="acadamic.highestQual.$dirty && acadamic.highestQual.$invalid || savesubmitted">
+						<span ng-show="acadamic.highestQual.$error.required">Highest Qualification is required.</span>
+						</span>
+                      </div>
+					  </div>
+					  <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">School Name:</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="Schoolname"  required placeholder="School name" class="form-control" ng-model="schoolname">
+						<span style="color:red" ng-show="acadamic.Schoolname.$dirty && acadamic.Schoolname.$invalid || savesubmitted">
+						<span ng-show="acadamic.Schoolname.$error.required">School name is required.</span>
+						</span>
+                      </div>
+                    </div>
+					 <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Year:</label>
+                      <div class="col-sm-10">
+                        <input type="number" placeholder="School Year" class="form-control" name="yearschool" ng-minlength='4' ng-maxlength='4' required ng-model="yearschool">
+						<span style="color:red" ng-show="acadamic.yearschool.$dirty && acadamic.yearschool.$invalid || savesubmitted">
+							<span class="help-inline" ng-show="contactsubmitted && acadamic.yearschool.$error.minlength || acadamic.yearschool.$dirty && acadamic.yearschool.$error.minlength">Years must be 4 characters long.</span>
+							<span class="help-inline" ng-show="contactsubmitted && acadamic.yearschool.$error.maxlength || acadamic.yearschool.$dirty && acadamic.yearschool.$error.maxlength">Years must be 4 characters long.</span><br>
+						<span ng-show="acadamic.yearschool.$error.required">School year is required.</span>
+						</span>
+                      </div>
+                    </div>
+					
+					 <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">How many Qualification :</label>
+                      <div class="col-sm-2">
+                        <input type="number" name="howmanyqualification" required placeholder="" class="form-control" ng-model="howmanyqualification" ng-change="addEducation()" >
+						<span style="color:red" ng-show="acadamic.howmanyqualification.$dirty && acadamic.howmanyqualification.$invalid || savesubmitted">
+						<span ng-show="acadamic.howmanyqualification.$error.required">Number of qualification is required.</span>
+						</span>
+					 </div>
+                    </div>
+                     
+                    
+					 <div class="form-group row" ng-repeat="education in educations">
+                      <label class="col-sm-2 form-control-label">Institute</label>
+                      <div class="col-sm-10">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <input type="text"name="institute" required placeholder="name" class="form-control" ng-model="education.institute">
+                          <span style="color:red" ng-show="acadamic.institute.$dirty && acadamic.institute.$invalid || savesubmitted">
+						<span ng-show="acadamic.institute.$error.required">Institute is required.</span>
+						</span>
+						  </div>
+						  <label class="col-sm-2 form-control-label">Qualification</label>
+                          <div class="col-md-3">
+                            <input type="text" name="qualify" required placeholder="level" class="form-control" ng-model="education.qualify">
+                          <span style="color:red" ng-show="acadamic.qualify.$dirty && acadamic.qualify.$invalid || savesubmitted">
+						<span ng-show="acadamic.qualify.$error.required">Qualification is required.</span>
+						</span>
+						  </div>
+						  <label class="col-sm-2 form-control-label">Year</label>
+                          <div class="col-md-2">
+                            <input type="number" name="year" required placeholder="20XX" class="form-control" ng-minlength='4' ng-maxlength='4' ng-model="education.year">
+							<span style="color:red" ng-show="acadamic.year.$dirty && acadamic.year.$invalid || savesubmitted">
+								<span class="help-inline" ng-show=" acadamic.year.$error.minlength || acadamic.year.$dirty && acadamic.year.$error.minlength">Years must be 4 characters long.</span>
+							<span class="help-inline" ng-show="acadamic.year.$error.maxlength || acadamic.year.$dirty && acadamic.year.$error.maxlength">Years must be 4 characters long.</span><br>
+						
+						<span ng-show="acadamic.year.$error.required">Year is required.</span>
+						</span>
+						  </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group row" >
+                      <div class="col-sm-12 ">
+                        <button type="submit" class="btn btn-secondary" style="float: right">Cancel</button>
+                        <button type="submit" class="btn btn-primary "style="float: right" ng-click="saveEducation()">Save changes</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div> </div>
+					
+                    <div class="tab-pane fade" id="nav-bank" role="tabpanel" aria-labelledby="nav-bank-tab">
+                       <div class="col-lg-12">
+              <div class="card">
+                
+                <div class="card-body">
+                  <form class="form-horizontal" name="bank" >
+                   <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Account Holder</label>
+                      <div class="col-sm-10">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <input type="text" name="accHolder" required placeholder=".Acc Holder" class="form-control" ng-model="accHolder">
+                          
+							<span style="color:red" ng-show="bank.accHolder.$dirty && bank.accHolder.$invalid || savesubmitted">
+						<span ng-show="bank.accHolder.$error.required">Account holder is required.</span>
+						</span>
+						</div>
+						  <label class="col-sm-2 form-control-label">Account number</label>
+                          <div class="col-md-3">
+                            <input type="number"name="accNo" required placeholder="Acc Number" class="form-control" ng-model="accNo">
+							<span style="color:red" ng-show="bank.accNo.$dirty && bank.accNo.$invalid || savesubmitted">
+						<span ng-show="bank.accNo.$error.required">Account Number is required.</span>
+						</span>
+                          </div>
+						  <label class="col-sm-2 form-control-label">Account type</label>
+                          <div class="col-md-2">
+                            <input type="text" name="accType" required placeholder="Acc Type" class="form-control" ng-model="accType">
+							<span style="color:red" ng-show="bank.accType.$dirty && bank.accType.$invalid || savesubmitted">
+						<span ng-show="bank.accType.$error.required">Account type is required.</span>
+						</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+					<div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Bank Name:</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="Bankname"required class="form-control" ng-model="bankName">
+						<span style="color:red" ng-show="bank.Bankname.$dirty && bank.Bankname.$invalid || savesubmitted">
+						<span ng-show="bank.Bankname.$error.required">Bank name is required.</span>
+						</span>
+                      </div>
+                    </div>
+					<div class="form-group row">
+                      <label class="col-sm-2 form-control-label">Branch Code:</label>
+                      <div class="col-sm-10">
+                        <input type="number" name="branchCode"required class="form-control" ng-model="branchCode">
+						<span style="color:red" ng-show="bank.branchCode.$dirty && bank.branchCode.$invalid || savesubmitted">
+						<span ng-show="bank.branchCode.$error.required">Branch code is required.</span>
+						</span>
+                      </div>
+                    </div>
+                   
+                    
+                    <div class="line"></div>
+                    
+                   
+                    <div class="form-group row">
+                      <div class="col-sm-12">
+                        <button type="submit" class="btn btn-secondary"style="float: right">Cancel</button>
+                        <button type="submit" class="btn btn-primary" style="float: right" ng-click="saveBank()">Save changes</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div> </div>
+                  </div>
+                
+                </div>
+              </div>
+        </div>
+      </div>
+</div>
+
+					</div>
+           
+        </div>
+      </section>
+      
+    </div>
+	<script>
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+	
+$scope.save = function(isValid) {
+    alert(isValid);
+   	if(isValid)
+	{
+		alert("Valid");
+	}
+	else
+	{
+	 $scope.savesubmitted = true;
+		alert("Not Valid");
+	}   
+    
+};
+});
+</script>
+    <!-- JavaScript files-->
+		<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+	
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+	<script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+    <!-- Data Tables-->
+	<script src="js/main.js"></script>
+    <script src="vendor/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="vendor/datatables.net-bs4/js/dataTables.bootstrap4.js"></script>
+    <script src="vendor/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="vendor/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+    <script src="js/tables-datatable.js"></script>
+    <!-- Main File-->
+    <script src="js/front.js"></script>
+
+  </body>
+</html>

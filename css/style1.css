@@ -1,0 +1,355 @@
+/*.header {
+  padding: 10px;
+  text-align: center;
+  background: #006837;
+  color: white;
+  font-size: 22px;
+}
+.footer{
+  padding: 10px;
+  text-align: center;
+  background: #006837;
+  color:black;
+  font-size: 14px;
+  text:underline;
+  color: white;
+}
+.pic{
+ padding: 10px;
+ 
+}
+.panel-body {
+    padding: 4px;
+    background-color: #F5F5F5;
+    font-size: 19px;
+    font-weight: bold;
+	text-align: center;
+	width:100%;
+}
+.ped{
+
+padding-left: 25px;
+}
+.pad-left-25{
+
+padding-left: 25px;
+}
+.pad-left-15{
+
+padding-left: 15px;
+}
+.leftbtn{
+padding-left: 75%;
+
+}
+.fontLato-Regular {
+    font-family: lato!important;
+    font-weight: 400!important;
+}
+.fontLato-Bold {
+    font-family: lato!important;
+    font-weight: 700!important;
+}
+.font-16 {
+    font-size: 17px!important;
+}
+.font-14 {
+    font-size: 15px!important;
+}
+.col-form-label {
+    padding-top: calc(.375rem + 1px);
+    padding-bottom: calc(.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+}
+.text-left {
+    text-align: left!important;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.font-bold-yellow
+{
+ color:#FFFF00;
+}
+a:hover
+{
+   color:white;
+}
+
+.radioToggleSales div[data-show].active {
+display: block;
+}
+
+.hide-div-sales{
+    display: none;
+}
+
+.radioToggleCSD div[data-show].active {
+display: block;
+}
+
+.hide-div-csd{
+    display: none;
+}*/
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+.greytext {
+    color: grey
+}
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #006837;
+  color: white;
+  font-size: 22px;
+}
+#helpline {
+    
+    color: white;
+    font-weight: normal
+}
+.font-bold-yellow
+{
+ color:#FFFF00;
+}
+a:hover
+{
+   color:white;
+}
+#heading {
+    text-transform: uppercase;
+    color: #006837;
+    font-weight: normal
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+.form-card {
+    text-align: left
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform input[type=text],
+#msform input[type=email],
+#msform input[type=number],
+#msform select,
+#msform textarea {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: white;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+#msform input:focus,
+#msform select:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #006837;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: #006837;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color:#f0ad4e
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    float: right
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    background-color: #000000
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #006837;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left
+}
+
+.purple-text {
+    color: #006837;
+    font-weight: normal
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.fieldlabels {
+    color: black;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #006837
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 20%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f13e"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+#progressbar #assistance:before {
+    font-family: FontAwesome;
+    content: "\f030"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #006837
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: #006837
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+.leftbtn{
+padding-left: 75%;
+
+}
+
+.footer{
+  padding: 10px;
+  text-align: center;
+  background: #006837;
+  color:black;
+  font-size: 14px;
+  text:underline;
+  color: white;
+}
